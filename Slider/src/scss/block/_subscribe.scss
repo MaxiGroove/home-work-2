@@ -1,0 +1,74 @@
+.subscribe {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 30px 0;
+    padding: 10px 18px;
+
+    border-top: 1px dashed $smokie;
+    border-bottom: 1px dashed $smokie;
+
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        max-width: 530px;
+        
+        font-size: 14px;
+        font-style: italic;
+        line-height: 16px;
+
+        padding-left: 15px;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        font-size: 10px;
+        line-height: 10px;
+        
+        height: 23px;
+        width: 160px;
+        margin-right: 18px;
+        padding-left: 6px;
+
+        border: 1px solid $smokie;
+    }
+
+    &__btn {
+        font-size: 10px;
+        line-height: 10px;
+
+        width: 80px;
+        height: 23px;
+
+        background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
+        border: 1px solid $smokie;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    @include breakpoint($first-bp) {
+        &__info {
+            width: 402px;
+        }
+    }
+
+    @include breakpoint($third-bp) {
+        flex-direction: column;
+
+        &__info {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        &__input {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@import './reset';
+@import './vars';
+@import "./mixins";
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Arial';
+    color: #000000;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1118px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include breakpoint($first-bp) {
+        max-width: 926px;
+    }
+
+    @include breakpoint($second-bp) {
+        max-width: 742px;
+
+        &__wrapper {
+            flex-direction: column
+        }
+    }
+
+    @include breakpoint($third-bp) {
+        max-width: 590px;
+    }
+
+    @include breakpoint($fourth-bp) {
+        max-width: 480px;
+        padding: 0;
+    }
+}
+
+@import './block/sidebar';
+@import './block/nav';
+@import './block/tweet';
+@import './block/main';
+@import './block/slider';
+@import './block/subscribe';
+@import './block/article';
+
+@import './block/footer';
+

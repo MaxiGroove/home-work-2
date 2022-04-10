@@ -1,0 +1,47 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 2px solid $smokie;
+    padding: 20px 0;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info {
+        display: flex;
+    }
+
+    &__item-link {
+        font-size: 12px;
+        line-height: 12px;
+        color: $text-color;
+        padding-right: 3px;
+    }
+ 
+    &__item-link span {
+        color: $smokie;
+    }
+
+    &__copyrights {
+        font-size: 12px;
+        line-height: 12px;
+        color: $smokie;
+    }
+
+    @include breakpoint($fourth-bp) {
+        margin: 0 25px;
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        margin-left: 5px;
+    }
+}

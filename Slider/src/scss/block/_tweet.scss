@@ -1,0 +1,41 @@
+.tweet {
+
+    &__title {
+        font-size: 12px;
+        line-height: 12px;
+        text-transform: uppercase;
+        border-bottom: 1px dashed $smokie;
+
+        padding-bottom: 5px;
+        margin: 10px 0;
+    }
+
+    &__text {
+        font-size: 10px;
+        font-style: italic;
+        line-height: 19px;
+
+        padding-bottom: 15px;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        line-height: 12px;
+        font-style: italic;
+        color: $text-color;
+
+        cursor: pointer;
+        width: 100%;
+        padding: 7px 0 7px 7px;
+
+        background: #fff;
+        border: 1px solid $smokie;
+        border-radius: 5px;
+    }
+
+    &__icon {
+        margin-right: 6px;
+    }
+}

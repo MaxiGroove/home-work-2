@@ -1,0 +1,12 @@
+.main {
+    max-width: 896px;
+
+    @include breakpoint($first-bp) {
+        max-width: 712px;
+    }
+
+    @include breakpoint($second-bp) {
+        
+    }
+}
+

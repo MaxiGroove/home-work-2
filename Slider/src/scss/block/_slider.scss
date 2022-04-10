@@ -1,0 +1,170 @@
+.slider {
+
+    &__items {
+        position: relative;
+    }
+
+    &__item {
+        display: none;
+        height: 445px;
+    }
+
+    &__logo {
+        object-fit: cover;
+        width: 100%;
+        height: 445px;
+    }
+
+    &__item.active {
+        display: block;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        transform: translateY(-160px);
+    }
+
+    &__title {
+        padding: 12px 20px;
+
+        font-size: 22px;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        font-style: italic;
+
+        background: #ffffff;
+    }
+
+    &__text {
+        padding: 14px 22px;
+
+        font-size: 14px;
+        color: #ffffff;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        font-style: italic;
+        
+        background: #000000;
+    }
+
+    &__control {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        width: 224px;
+        height: 85px;
+        padding-left: 20px;
+
+        background: #EFF8F7;
+        border-left: 1px solid #f9fbfb;
+        cursor: pointer;
+    }
+
+    &__btn.active {
+        background: #D9EFEC;
+        border-left:  none;
+    }
+
+    &__btn-title {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 18px;
+        color: $text-color;
+    }
+    
+    &__btn-text {
+        font-size: 10px;
+        font-style: italic;
+        line-height: 19px;
+        color: $text-color;
+    }
+
+    &__btn-prev,
+    &__btn-next {
+        display: none;
+        position: absolute;
+        top: 0;
+        top: 50%;
+        color: #ffffff;
+        padding: 15px;
+        border-radius: 0 3px 3px 0;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.8)
+    }
+
+    &__btn-next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    @include breakpoint($first-bp) {
+
+        &__logo {
+            object-fit: cover;
+            width: 100%;
+            height: 445px;
+        }
+
+        &__btn {
+            align-items: center;
+            width: 178px;
+            height: 35px;
+            padding: 0;
+        }
+
+        &__btn-title {
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        &__btn-text {
+            display: none;
+        }
+    }
+
+    @include breakpoint($third-bp) {
+
+        &__item {
+            max-height: 353px;
+        }
+
+        &__logo {
+            max-height: 353px;
+        }
+
+        &__control {
+            display: none;
+        }
+
+        &__info {
+            transform: translateY(-92px);
+            align-items: stretch;
+        }
+
+        &__title {
+            padding-left: 5px;
+            opacity: 0.6;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        &__text {
+            padding-left: 5px;
+            padding-right: 0;
+        }
+
+        &__btn-prev,
+        &__btn-next {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    max-width: 140px;
+
+    &__logo {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    @include breakpoint($second-bp) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        max-width: 710px;
+        padding: 20px 0;
+
+        &__social {
+            display: none;
+        }
+    }
+
+    @include breakpoint($third-bp) {
+        &__logo {
+            margin-right: 10px;
+        }
+    }
+
+    @include breakpoint($fourth-bp) {
+        flex-direction: column-reverse;
+        padding: 30px;
+    }
+}
+
